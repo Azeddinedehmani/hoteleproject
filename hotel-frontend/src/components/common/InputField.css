@@ -1,0 +1,96 @@
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-field__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.input-field__required {
+  color: var(--gold);
+  margin-left: 3px;
+}
+
+.input-field__wrapper {
+  position: relative;
+}
+
+.input-field__input {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+}
+
+.input-field__input::placeholder {
+  color: var(--text-light);
+}
+
+.input-field__input:hover {
+  border-color: rgba(201,168,76,0.5);
+}
+
+.input-field__input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+}
+
+.has-error .input-field__input {
+  border-color: var(--error);
+}
+
+.has-error .input-field__input:focus {
+  box-shadow: 0 0 0 3px rgba(214,69,69,0.1);
+}
+
+/* Bouton afficher/masquer mdp */
+.input-field__toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-light);
+  font-size: 10px;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.input-field__toggle:hover { color: var(--gold); }
+
+.input-field__error {
+  font-size: 12px;
+  color: var(--error);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.input-field__error::before {
+  content: '!';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  background: var(--error);
+  color: white;
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: 700;
+  flex-shrink: 0;
+}

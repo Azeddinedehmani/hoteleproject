@@ -1,0 +1,274 @@
+/* ── Full layout ───────────────────────────────────────────────────────────── */
+.dash-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+.dash-sidebar {
+  width: 248px;
+  flex-shrink: 0;
+  background: var(--charcoal);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.dash-sidebar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  flex-shrink: 0;
+}
+
+.dash-sidebar__logo-icon { color: var(--gold); font-size: 20px; }
+.dash-sidebar__logo-text {
+  font-family: var(--font-display);
+  color: var(--white);
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+/* Nav */
+.dash-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.75rem;
+  gap: 1px;
+  overflow-y: auto;
+}
+
+.dash-nav__section {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.3);
+  padding: 12px 12px 4px;
+  margin-top: 4px;
+}
+
+.dash-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 7px;
+  color: rgba(255,255,255,0.55);
+  font-size: 13.5px;
+  font-weight: 400;
+  transition: all 0.18s;
+  text-decoration: none;
+  position: relative;
+}
+
+.dash-nav__link:hover {
+  background: rgba(201,168,76,0.1);
+  color: rgba(255,255,255,0.85);
+}
+
+.dash-nav__link.is-active {
+  background: rgba(201,168,76,0.18);
+  color: var(--gold-light, #E8C96C);
+  font-weight: 500;
+}
+
+.dash-nav__link.is-active::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: var(--gold);
+  border-radius: 0 3px 3px 0;
+}
+
+.dash-nav__icon { font-size: 15px; opacity: 0.85; flex-shrink: 0; }
+
+/* User card */
+.dash-sidebar__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem 1.25rem;
+  margin: 0.75rem;
+  background: rgba(255,255,255,0.06);
+  border-radius: 10px;
+  border: 1px solid rgba(201,168,76,0.12);
+  flex-shrink: 0;
+}
+
+.dash-sidebar__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.dash-sidebar__info { flex: 1; min-width: 0; }
+
+.dash-sidebar__name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dash-sidebar__role {
+  font-size: 10px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.dash-sidebar__logout {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.3);
+  cursor: pointer;
+  font-size: 15px;
+  padding: 4px;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.dash-sidebar__logout:hover { color: #EF4444; }
+
+/* ── Main ─────────────────────────────────────────────────────────────────── */
+.dash-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dash-topbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem;
+  height: 60px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dash-topbar__burger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-primary);
+  padding: 4px;
+}
+
+.dash-topbar__left { flex: 1; }
+
+.dash-topbar__title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--charcoal);
+}
+
+.dash-topbar__right { display: flex; align-items: center; gap: 12px; }
+
+.dash-topbar__user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  background: var(--cream);
+}
+
+.dash-topbar__avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--charcoal);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.dash-topbar__info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.dash-topbar__name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+.dash-topbar__role {
+  font-size: 10px;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dash-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* ── Overlay mobile ───────────────────────────────────────────────────────── */
+.dash-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 40;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .dash-sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    height: 100%;
+    z-index: 50;
+    transition: left 0.3s ease;
+    width: 260px;
+  }
+
+  .dash-sidebar.is-open { left: 0; }
+
+  .dash-overlay { display: block; }
+
+  .dash-topbar__burger { display: flex; }
+
+  .dash-topbar__user { display: none; }
+
+  .dash-content { padding: 1.25rem 1rem; }
+}

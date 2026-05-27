@@ -1,0 +1,285 @@
+.adm-dash__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.adm-dash__title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+
+.adm-dash__date {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-transform: capitalize;
+}
+
+.adm-dash__welcome-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+.adm-dash__avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--charcoal);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* KPI grid */
+.adm-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.adm-stat {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.adm-stat:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+.adm-stat::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: var(--color, var(--gold));
+  border-radius: 4px 4px 0 0;
+}
+
+.adm-stat__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.adm-stat__icon {
+  font-size: 20px;
+  color: var(--color, var(--gold));
+}
+
+.adm-stat__trend {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 20px;
+}
+
+.adm-stat__trend.up   { background: rgba(16,185,129,0.1); color: #059669; }
+.adm-stat__trend.down { background: rgba(239,68,68,0.1);  color: #DC2626; }
+
+.adm-stat__value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.adm-stat__label {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Section title */
+.adm-dash__section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+/* Shortcuts */
+.adm-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.adm-shortcut {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--charcoal);
+  text-align: left;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.adm-shortcut::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--sc-color, var(--gold));
+  border-radius: 3px 0 0 3px;
+}
+
+.adm-shortcut:hover {
+  border-color: var(--sc-color, var(--gold));
+  box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+  transform: translateY(-1px);
+}
+
+.adm-shortcut__icon { font-size: 18px; color: var(--sc-color, var(--gold)); }
+.adm-shortcut__label { flex: 1; }
+.adm-shortcut__arrow { color: var(--text-muted); font-size: 14px; }
+
+/* 2-col layout */
+.adm-dash__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.adm-panel {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.adm-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.adm-panel__header h3 {
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--charcoal);
+}
+
+.adm-panel__loading,
+.adm-panel__empty {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* Reservations list */
+.adm-res-list { padding: 0.5rem 0; }
+
+.adm-res-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 1.25rem;
+  transition: background 0.15s;
+}
+
+.adm-res-row:hover { background: rgba(201,168,76,0.04); }
+
+.adm-res-row__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.adm-res-row__dot[data-status="confirmed"]  { background: #10B981; }
+.adm-res-row__dot[data-status="pending"]    { background: #F59E0B; }
+.adm-res-row__dot[data-status="checked_in"] { background: #3B82F6; }
+.adm-res-row__dot[data-status="cancelled"]  { background: #EF4444; }
+.adm-res-row__dot[data-status="checked_out"]{ background: #8B5CF6; }
+
+.adm-res-row__client {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 2px;
+}
+.adm-res-row__meta { font-size: 11px; color: var(--text-muted); }
+
+.adm-res-row__status {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: var(--cream-dark);
+  color: var(--text-muted);
+}
+
+/* Role bars */
+.adm-role-bars { padding: 1.25rem; display: flex; flex-direction: column; gap: 1.25rem; }
+
+.adm-role-bar__info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 6px;
+}
+
+.adm-role-bar__track {
+  height: 6px;
+  background: var(--cream-dark);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.adm-role-bar__fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+@media (max-width: 1024px) {
+  .adm-stats-grid  { grid-template-columns: repeat(2, 1fr); }
+  .adm-shortcuts   { grid-template-columns: repeat(2, 1fr); }
+  .adm-dash__cols  { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .adm-stats-grid { grid-template-columns: 1fr; }
+}

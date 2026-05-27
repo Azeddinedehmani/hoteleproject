@@ -1,0 +1,166 @@
+/* ── Tariff preview ─────────────────────────────────────────────────────── */
+
+.tariff-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: var(--radius-sm);
+  margin-top: 1rem;
+}
+
+.tariff-preview__label { font-size: 13px; color: var(--text-muted); }
+
+.tariff-preview__value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold-dark);
+}
+
+.tariff-preview__badge {
+  background: rgba(201,168,76,0.2);
+  color: var(--gold-dark);
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ── Season badge ───────────────────────────────────────────────────────── */
+
+.season-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.season--low  { background: rgba(148,163,184,0.15); color: #64748B; }
+.season--mid  { background: rgba(16,185,129,0.12);  color: #047857; }
+.season--high { background: rgba(245,158,11,0.15);  color: #B45309; }
+.season--peak { background: rgba(239,68,68,0.12);   color: #DC2626; }
+
+/* ── Discount / active badges ───────────────────────────────────────────── */
+
+.discount-badge {
+  background: rgba(16,185,129,0.12);
+  color: #047857;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.active-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.active-badge--on  { background: rgba(16,185,129,0.12); color: #047857; }
+.active-badge--off { background: rgba(148,163,184,0.15); color: #64748B; }
+
+/* ── Section Prix de base ───────────────────────────────────────────────── */
+
+.base-prices-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border, #e2e8f0);
+  border-radius: var(--radius, 12px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.base-prices-header {
+  margin-bottom: 1.25rem;
+}
+
+.base-prices-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary, #1e293b);
+  margin: 0 0 0.3rem;
+}
+
+.base-prices-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted, #64748b);
+  margin: 0;
+}
+
+/* Grille responsive : 2 colonnes min, 5 max */
+.base-prices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.base-price-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.1rem 0.75rem 1rem;
+  background: var(--surface, #f8fafc);
+  border: 1px solid var(--border, #e2e8f0);
+  border-radius: var(--radius-sm, 8px);
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.base-price-card:hover {
+  border-color: var(--gold, #c9a84c);
+  box-shadow: 0 2px 8px rgba(201,168,76,0.15);
+}
+
+.base-price-card--empty {
+  opacity: 0.55;
+}
+
+.base-price-card__icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.base-price-card__label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary, #1e293b);
+}
+
+.base-price-card__count {
+  font-size: 0.75rem;
+  color: var(--text-muted, #64748b);
+}
+
+.base-price-card__input-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.base-price-card__input {
+  flex: 1;
+  min-width: 0;
+  text-align: right;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.base-price-card__currency {
+  font-size: 0.78rem;
+  color: var(--text-muted, #64748b);
+  white-space: nowrap;
+}
+
+.base-price-card__btn {
+  width: 100%;
+  margin-top: 0.2rem;
+}

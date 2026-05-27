@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation confirmée</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f6f0; margin: 0; padding: 20px; }
+    .container { max-width: 600px; margin: auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+    .header { background: #1a1a2e; padding: 30px; text-align: center; }
+    .header h1 { color: #c9a227; margin: 0; font-size: 22px; letter-spacing: 2px; }
+    .body { padding: 30px; }
+    .success-banner { text-align: center; margin: 20px 0; }
+    .success-banner .icon { font-size: 48px; }
+    .success-banner h2 { color: #27ae60; margin: 8px 0; }
+    .details { background: #f9f6f0; border-left: 4px solid #27ae60; padding: 16px; margin: 20px 0; border-radius: 4px; }
+    .details h3 { color: #1a1a2e; margin: 0 0 12px; }
+    .details p { margin: 4px 0; color: #555; }
+    .status-confirmed { color: #27ae60; font-weight: bold; }
+    .notes-box { background: #f0f0f0; border-radius: 4px; padding: 12px; margin: 12px 0; color: #555; }
+    .footer { background: #1a1a2e; padding: 16px; text-align: center; }
+    .footer p { color: #888; font-size: 12px; margin: 0; }
+    .note { color: #999; font-size: 12px; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>HÔTEL</h1>
+    </div>
+    <div class="body">
+      <p style="color:#333">Bonjour <strong>{{clientFirstName}}</strong>,</p>
+
+      <div class="success-banner">
+        <div class="icon">✓</div>
+        <h2>Votre réservation est confirmée !</h2>
+      </div>
+
+      <p style="color:#555">
+        Nous avons le plaisir de vous confirmer votre séjour. Nous nous réjouissons de vous accueillir prochainement.
+      </p>
+
+      <div class="details">
+        <h3>Votre réservation</h3>
+        <p><strong>N° de réservation :</strong> #{{reservationId}}</p>
+        <p><strong>Arrivée :</strong> {{checkInDate}}</p>
+        <p><strong>Départ :</strong> {{checkOutDate}}</p>
+        <p><strong>Durée :</strong> {{nights}} nuit(s)</p>
+        <p><strong>Personnes :</strong> {{guests}}</p>
+        <p><strong>Statut :</strong> <span class="status-confirmed">Confirmée</span></p>
+      </div>
+
+      <!-- Affiché uniquement si des remarques existent -->
+      <!-- {{#if notes}}
+      <p style="color:#555"><strong>Vos remarques :</strong></p>
+      <div class="notes-box">{{notes}}</div>
+      {{/if}} -->
+
+      <p style="color:#555">
+        Nous vous souhaitons un excellent séjour parmi nous.
+        N'hésitez pas à nous contacter si vous avez des questions ou des besoins particuliers.
+      </p>
+
+      <p class="note">Cet email est envoyé automatiquement, merci de ne pas y répondre.</p>
+    </div>
+    <div class="footer">
+      <p>&copy; Hôtel — Tous droits réservés</p>
+    </div>
+  </div>
+</body>
+</html>

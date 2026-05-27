@@ -1,0 +1,23 @@
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.page-header__title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+
+.page-header__sub {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.page-header__action { flex-shrink: 0; }

@@ -1,0 +1,18 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge--pending   { background: rgba(232,160,32,0.12); color: #B87A10; }
+.badge--confirmed { background: rgba(58,158,107,0.12); color: #2E7D52; }
+.badge--checkin   { background: rgba(59,130,246,0.12); color: #1D4ED8; }
+.badge--checkout  { background: rgba(139,92,246,0.12); color: #6D28D9; }
+.badge--cancelled { background: rgba(214,69,69,0.10);  color: #B91C1C; }
+.badge--default   { background: var(--cream-dark);     color: var(--text-muted); }
